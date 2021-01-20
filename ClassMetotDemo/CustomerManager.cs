@@ -16,11 +16,18 @@ namespace ClassMetotDemo
             Console.WriteLine("Customer is deleted.. " + customer.CustomerName, customer.CustomerSurname);
         }
 
-        public void List(Customer customer)
+        public void List(Customer[] customers)
         {
             Console.WriteLine("Customer list ");
+            foreach (Customer c in customers)
+            
+            {
+                Console.WriteLine(c.CustomerName);
+                Console.WriteLine(c.CustomerSurname);
+                Console.WriteLine(c.TCKN);
+                Console.WriteLine("------------------------------");
+            }
 
-         
         }
     }
 }

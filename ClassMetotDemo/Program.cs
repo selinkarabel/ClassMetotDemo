@@ -20,23 +20,24 @@ namespace ClassMetotDemo
             customers2.CustomerSurname = "K";
             customers2.TCKN = "12345678913";
 
+            Customer customers3 = new Customer();
+            customers3.Id = 3;
+            customers3.CustomerName = "Chivas";
+            customers3.CustomerSurname = "K";
+            customers3.TCKN = "12345678914";
+
 
             Customer[] customers = new Customer[] {customers1, customers2 };
 
-            foreach (Customer c in customers)
-            {
-                Console.WriteLine(c.CustomerName);
-                Console.WriteLine(c.CustomerSurname);
-                Console.WriteLine(c.TCKN);
-                Console.WriteLine("------------------------------");
-            }
+          
+
 
             Console.WriteLine("-------------------Metotlar-------------------");
 
             CustomerManager customerManager = new CustomerManager();
-            customerManager.Add(customers1);
-            customerManager.Delete(customers1);
-            customerManager.List(customers1);
+            customerManager.Add(customers3);
+            customerManager.Delete(customers3);
+            customerManager.List(customers);
 
         }
     }
